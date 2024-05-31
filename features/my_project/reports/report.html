@@ -1,0 +1,13 @@
+Feature: User Login # features/login.feature:1
+
+  Scenario: Successful Login                               # features/login.feature:3
+    Given I open the Demoblaze home page                   # features/steps/sign_up_steps.py:14
+    When I navigate to the login page                      # features/steps/sign_up_steps.py:85
+    And I enter the registered "152528855" and "152528855" # features/steps/sign_up_steps.py:91
+    And I click the Log in modal button                    # features/steps/sign_up_steps.py:107
+    Then I should be successfully logged in                # features/steps/sign_up_steps.py:116
+
+  Scenario: Login with Invalid Credentials                            # features/login.feature:10
+    Given I open the Demoblaze home page                              # features/steps/sign_up_steps.py:14
+    When I navigate to the login page                                 # features/steps/sign_up_steps.py:85
+    And I enter "existing_user" into the username field               # features/steps/sign_up_steps.py:39
